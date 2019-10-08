@@ -1,0 +1,14 @@
+.login-page {
+  background-color: #282c34;
+  width: fit-content;
+}
+
+.big-logo {
+  color: #ffe300;
+  font-size: 38px;
+}
+
+.login-form {
+  background-color: aliceblue;
+  padding: 20px 30px;
+}
