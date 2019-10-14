@@ -20,8 +20,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint ./*.js src/**/*.{js,jsx}",
-    "lint:fix": "npm run lint -- --fix"
+    "lint": "eslint ./*.js src/**/*.{js,jsx,css}",
+    "lint:fix": "npm run lint -- --fix",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {
@@ -50,6 +52,10 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.2.4",
+    "@storybook/addon-links": "^5.2.4",
+    "@storybook/addons": "^5.2.4",
+    "@storybook/react": "^5.2.4",
     "eslint-plugin-prettier": "^3.1.1",
     "prettier": "1.18.2"
   }
