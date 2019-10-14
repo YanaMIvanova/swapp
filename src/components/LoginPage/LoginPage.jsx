@@ -1,16 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './LoginPage.scss'
 
 function LoginPage() {
+    const [formState, setFormState] = useState({ username: '', password: '' })
+
+    const login = e => {
+        e.preventDefault()
+        console.log(formState)
+        setFormState({ username: '', password: '' })
+    }
+
+    const change = e => {
+        e.preventDefault()
+        setFormState({ ...formState, ...{ [e.target.id]: e.target.value } })
+    }
+
     return (
         <div className="login-page">
-            <text className="big-logo">SWAPP</text>
-            <form className="login-form">
-                <input placeholder="Username" type="text" name="gender" id="username" />
+            <span className="big-logo">SWAPP</span>
+            <form onSubmit={login} className="login-form">
+                <input
+                    onChange={change}
+                    value={formState.username}
+                    className="input"
+                    placeholder="Username"
+                    type="text"
+                    id="username"
+                />
                 <br />
-                <input placeholder="Password" type="text" name="gender" id="password" />
+                <input
+                    onChange={change}
+                    value={formState.password}
+                    className="input"
+                    placeholder="Password"
+                    type="text"
+                    id="password"
+                />
                 <br />
-                <button>Login</button>
+                <input className="submit-button" type="submit" value="Login" />
             </form>
         </div>
     )
