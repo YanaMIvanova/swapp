@@ -2,8 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { LoginPage } from './components/LoginPage'
 import { EpisodesPage } from './components/EpisodesPage'
-import { CharactersPage } from './components/CharactersPage'
 import { EpisodePage } from './components/EpisodePage'
+import { CharactersPage } from './components/CharactersPage'
+import { CharacterPage } from './components/CharacterPage'
 import { StarshipPage } from './components/StarshipPage'
 import Header from './components/Header'
 import './App.scss'
@@ -24,6 +25,9 @@ function App() {
                 </Route>
                 <Route path="/episodes/:episodeId">
                     <EpisodePage />
+                </Route>
+                <Route path="/characters/:characterId">
+                    <CharacterPage />
                 </Route>
                 <Route path="/starships/:starshipId ">
                     <StarshipPage />
