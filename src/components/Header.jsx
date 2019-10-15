@@ -1,8 +1,13 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useHistory } from 'react-router-dom'
 import './Header.scss'
 
 function Header() {
+    let history = useHistory()
+
+    function handleGoBack() {
+        history.goBack()
+    }
     return (
         <header>
             <Link className="big-logo" to="/">
@@ -17,7 +22,7 @@ function Header() {
                         <NavLink to="/characters">Characters</NavLink>
                     </li>
                 </ul>
-                <button>Back</button>
+                <button onClick={handleGoBack}>Back</button>
             </div>
         </header>
     )

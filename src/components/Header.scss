@@ -1,21 +1,53 @@
 @import '../App';
 
-header {
-    padding: 0 $container-padding;
-}
+.dark {
+    header {
+        padding: 0 $container-padding;
+        background-color: $common-black;
 
-.navigation {
-    float: right;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+        .big-logo {
+            text-decoration: none;
+        }
+    }
 
-    ul {
+    .navigation {
+        float: right;
         display: flex;
-        list-style-type: none;
+        flex-direction: row;
+        align-items: baseline;
 
-        li {
-            margin-right: 10px;
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            a {
+                margin-right: 10px;
+                text-decoration: none;
+                color: $common-blue;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $dark-blue;
+                }
+
+                &.active {
+                    color: $dark-blue;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        button {
+            height: 45px;
+            background-color: transparent;
+            border: 2px solid $common-blue;
+            color: $common-blue;
+            transition: 0.3s;
+
+            &:hover {
+                color: $dark-blue;
+                border-color: $dark-blue;
+            }
         }
     }
 }

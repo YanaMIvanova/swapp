@@ -9,31 +9,33 @@ import { StarshipPage } from './components/StarshipPage'
 import Header from './components/Header'
 import './App.scss'
 
-function App() {
+function App({ theme = 'dark' }) {
     return (
-        <Router>
-            <Header />
-            <Switch>
-                <Route exact path="/">
-                    <LoginPage />
-                </Route>
-                <Route path="/episodes">
-                    <EpisodesPage />
-                </Route>
-                <Route path="/characters">
-                    <CharactersPage />
-                </Route>
-                <Route path="/episodes/:episodeId">
-                    <EpisodePage />
-                </Route>
-                <Route path="/characters/:characterId">
-                    <CharacterPage />
-                </Route>
-                <Route path="/starships/:starshipId ">
-                    <StarshipPage />
-                </Route>
-            </Switch>
-        </Router>
+        <div className={theme}>
+            <Router>
+                <Header />
+                <Switch>
+                    <Route exact path="/">
+                        <LoginPage />
+                    </Route>
+                    <Route path="/episodes">
+                        <EpisodesPage />
+                    </Route>
+                    <Route path="/characters">
+                        <CharactersPage />
+                    </Route>
+                    <Route path="/episodes/:episodeId">
+                        <EpisodePage />
+                    </Route>
+                    <Route path="/characters/:characterId">
+                        <CharacterPage />
+                    </Route>
+                    <Route path="/starships/:starshipId ">
+                        <StarshipPage />
+                    </Route>
+                </Switch>
+            </Router>
+        </div>
     )
 }
 
