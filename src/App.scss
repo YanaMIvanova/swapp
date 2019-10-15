@@ -3,9 +3,15 @@
     src: url('./font/Starjedi.ttf') format('truetype');
 }
 
+// Colors
+
 $common-yellow: #ffe300;
 $light-yellow: #fffda5;
 
 $common-blue: #4bd5ee;
 $common-black: #282c34;
 $common-white: #f0f8ff;
+
+// Space
+
+$container-padding: 100px;

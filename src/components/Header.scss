@@ -1,0 +1,21 @@
+@import '../App';
+
+header {
+    padding: 0 $container-padding;
+}
+
+.navigation {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            margin-right: 10px;
+        }
+    }
+}
