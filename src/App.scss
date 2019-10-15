@@ -3,6 +3,17 @@
     src: url('./font/Starjedi.ttf') format('truetype');
 }
 
+.dark {
+    background-color: #000;
+}
+
+html,
+body,
+#root,
+.dark {
+    height: 100%;
+}
+
 // Colors
 
 $common-yellow: #ffe300;
