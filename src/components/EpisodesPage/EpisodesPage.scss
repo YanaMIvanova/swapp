@@ -1,0 +1,46 @@
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+    overflow: hidden;
+    position: relative;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $lineCount;
+    text-align: justify;
+    padding-right: 1em;
+    &:before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $bgColor;
+    }
+}
+
+.episode-card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+
+    .episode-cover {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .episode-text {
+        background-color: white;
+        padding: 10px;
+
+        p {
+            @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 7, $bgColor: white);
+        }
+    }
+}
+
+.episode-cover {
+    width: 100%;
+}
