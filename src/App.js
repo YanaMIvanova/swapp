@@ -9,7 +9,7 @@ import { StarshipPage } from './components/StarshipPage'
 import Header from './components/Header'
 import './App.scss'
 
-function App({ theme = 'dark' }) {
+function App({ theme = 'light' }) {
     return (
         <div className={theme}>
             <Router>
