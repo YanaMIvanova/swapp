@@ -18,10 +18,10 @@ function App({ theme = 'light' }) {
                     <Route exact path="/">
                         <LoginPage />
                     </Route>
-                    <Route path="/episodes">
+                    <Route exact path="/episodes">
                         <EpisodesPage />
                     </Route>
-                    <Route path="/characters">
+                    <Route exact path="/characters">
                         <CharactersPage />
                     </Route>
                     <Route path="/episodes/:episodeId">

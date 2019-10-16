@@ -15,8 +15,10 @@ const episodeTitles = [
 function EpisodesPage() {
     return (
         <div className="episodes-page">
-            {episodeTitles.map(title => (
+            {episodeTitles.map((title, index) => (
                 <EpisodeCard
+                    key={index}
+                    id={index}
                     img={img}
                     title={title}
                     summary="Lorem Ipsum is just a dummy text with a lot of unknown words. Here we go again! Lorem Ipsum is just
