@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { LoginPage } from './components/LoginPage'
 import { EpisodesPage } from './components/EpisodesPage'
 import { EpisodePage } from './components/EpisodePage'
@@ -10,16 +10,18 @@ import Header from './components/Header'
 import './App.scss'
 
 function App({ theme = 'light' }) {
+    const loggedIn = true
+
     return (
         <div className={theme}>
             <Router>
                 <Header />
                 <Switch>
                     <Route exact path="/">
-                        <LoginPage />
+                        {loggedIn ? <Redirect to="/episodes" /> : <LoginPage />}
                     </Route>
                     <Route exact path="/episodes">
-                        <EpisodesPage />
+                        {loggedIn ? <EpisodesPage /> : <Redirect to="/" />}
                     </Route>
                     <Route exact path="/characters">
                         <CharactersPage />
