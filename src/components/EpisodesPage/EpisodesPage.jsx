@@ -13,16 +13,20 @@ const episodeTitles = [
 ]
 
 function EpisodesPage() {
-    return episodeTitles.forEach(title => (
-        <EpisodeCard
-            img={img}
-            title={title}
-            summary="Lorem Ipsum is just a dummy text with a lot of unknown words. Here we go again! Lorem Ipsum is just
+    return (
+        <div className="episodes-page">
+            {episodeTitles.map(title => (
+                <EpisodeCard
+                    img={img}
+                    title={title}
+                    summary="Lorem Ipsum is just a dummy text with a lot of unknown words. Here we go again! Lorem Ipsum is just
                     a dummy text with a lot of unknown words. Here we go again - Lorem Ipsum is just a dummy text with a
                     lot of unknown words. Here we go again! Lorem Ipsum is just a dummy text with a lot of unknown
                     words. Here we go again"
-        />
-    ))
+                />
+            ))}
+        </div>
+    )
 }
 
 export default EpisodesPage

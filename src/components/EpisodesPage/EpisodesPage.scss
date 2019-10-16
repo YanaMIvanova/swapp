@@ -1,3 +1,12 @@
+@import './../../App';
+
+.episodes-page {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: 20px $container-padding;
+}
+
 .episode-card {
     width: 200px;
     display: flex;
