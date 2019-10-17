@@ -1,7 +1,9 @@
 import React from 'react'
 import episodeCover from './../../assets/episode-cover.jpeg'
 import CharacterCard from '../CharactersPage/CharacterCard'
+
 import characterAvatar from '../../assets/character-avatar.jpeg'
+
 import './EpisodePage.scss'
 
 const charactersNames = ['Luke Skywalker', 'Obi-Wan Kenobi', 'Anakin Skywalker', 'Wilhuff Tarkin', 'Chewbacca']

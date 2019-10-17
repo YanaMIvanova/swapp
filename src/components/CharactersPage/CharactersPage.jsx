@@ -1,6 +1,8 @@
 import React from 'react'
-import characterAvatar from './../../assets/character-avatar.jpeg'
 import CharacterCard from './CharacterCard'
+
+import characterAvatar from './../../assets/character-avatar.jpeg'
+
 import './CharactersPage.scss'
 
 const charactersNames = [

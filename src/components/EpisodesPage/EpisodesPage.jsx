@@ -1,6 +1,8 @@
 import React from 'react'
-import img from '../../assets/episode-cover.jpeg'
 import EpisodeCard from './EpisodeCard'
+
+import img from '../../assets/episode-cover.jpeg'
+
 import './EpisodesPage.scss'
 
 const episodeTitles = [

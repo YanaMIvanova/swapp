@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Link, useHistory } from 'react-router-dom'
+
 import './Header.scss'
 
 function Header() {

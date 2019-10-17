@@ -7,6 +7,7 @@ import { CharactersPage } from './components/CharactersPage'
 import { CharacterPage } from './components/CharacterPage'
 import { StarshipPage } from './components/StarshipPage'
 import Header from './components/Header'
+
 import './App.scss'
 
 function App({ theme = 'light' }) {
