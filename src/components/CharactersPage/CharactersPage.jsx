@@ -21,9 +21,19 @@ const charactersNames = [
 function CharactersPage() {
     return (
         <div className="characters-page">
-            {charactersNames.map((characterName, index) => {
-                return <CharacterCard key={index} characterName={characterName} characterAvatar={characterAvatar} />
-            })}
+            <div className="characters-cards">
+                {charactersNames.map((characterName, index) => {
+                    return (
+                        <CharacterCard
+                            key={index}
+                            id={index}
+                            characterName={characterName}
+                            characterAvatar={characterAvatar}
+                        />
+                    )
+                })}
+            </div>
+            <button className="common-button">Load More</button>
         </div>
     )
 }

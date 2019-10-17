@@ -5,16 +5,24 @@ $avatar-size: 100px;
 // <-- Constants
 
 .characters-page {
+    padding: 0 $container-padding;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.characters-cards {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
-    padding: 0 $container-padding;
 }
 
 .character-card {
     display: flex;
     height: $avatar-size;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .character-avatar {
@@ -30,6 +38,12 @@ $avatar-size: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $light-yellow;
+    }
 }
 
 .character-name {

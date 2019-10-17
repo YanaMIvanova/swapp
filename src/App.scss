@@ -25,6 +25,15 @@ $common-padding-space: 20px;
     background-color: $common-white;
 }
 
+.common-button {
+    padding: 10px;
+    color: $common-yellow;
+    font-family: starjedi;
+    background-color: $common-black;
+    border: none;
+    border-radius: 10px;
+}
+
 html,
 body,
 #root,
