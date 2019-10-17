@@ -22,6 +22,12 @@
         background-color: white;
         padding: $common-padding-space;
 
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $light-yellow;
+        }
+
         .episode-summary {
             overflow: hidden;
             text-overflow: ellipsis;

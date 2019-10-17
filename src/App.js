@@ -10,7 +10,7 @@ import Header from './components/Header'
 import './App.scss'
 
 function App({ theme = 'light' }) {
-    const loggedIn = false
+    const loggedIn = true
 
     return (
         <div className={theme}>
