@@ -28,11 +28,11 @@ function EpisodePage() {
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
                 <div>
-                    <span>Director:</span>
+                    <b>Director: </b>
                     <span>George Lucas</span>
                 </div>
                 <div>
-                    <span>Release Date:</span>
+                    <b>Release Date: </b>
                     <span>1999-05-19</span>
                 </div>
             </section>

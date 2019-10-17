@@ -5,7 +5,7 @@
         background-color: $common-black;
         border-radius: 5px;
 
-        padding: 0 $common-padding-space $common-padding-space;
+        padding: 0 $common-space $common-space;
         margin: auto;
 
         display: flex;
@@ -27,7 +27,7 @@
 
     .login-form {
         background-color: $common-white;
-        padding: $common-padding-space $common-padding-space;
+        padding: $common-space $common-space;
         border-radius: 5px;
 
         .input {

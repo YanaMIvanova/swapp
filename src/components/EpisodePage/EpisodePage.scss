@@ -1,7 +1,7 @@
 @import './../../App';
 
 .episode-page {
-    padding: $common-padding-space $container-padding;
+    padding: $common-space $container-padding;
 }
 
 .episode-side-card {
@@ -31,4 +31,14 @@
 
 .episode-subtitle {
     color: $common-black;
+}
+
+.episode-info {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+.episode-summary {
+    margin: 0 0 $common-space;
 }
