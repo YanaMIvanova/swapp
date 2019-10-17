@@ -7,21 +7,21 @@
 .episode-side-card {
     display: flex;
     flex-direction: row;
+
+    .episode-text {
+        padding: 20px;
+        width: 100%;
+        font-family: starjedi;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .episode-cover {
     border-radius: 10px 0 0 10px;
-}
-
-.episode-text {
-    padding: 20px;
-    width: 100%;
-    font-family: starjedi;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .episode-title {
