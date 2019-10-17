@@ -41,4 +41,11 @@
 
 .episode-summary {
     margin: 0 0 $common-space;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    max-height: 152px;
 }
