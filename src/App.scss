@@ -1,5 +1,4 @@
-// Colors
-
+// Colors Constants -->
 $font-color: #4e5b6e;
 
 $common-yellow: #ffe300;
@@ -10,10 +9,12 @@ $dark-blue: darken($common-blue, 25%);
 
 $common-black: #282c34;
 $common-white: #e8eaed;
+// <-- Colors Constants
 
-// Space
-
+// Space Constants -->
 $container-padding: 100px;
+$common-padding-space: 20px;
+// <-- Space Constants
 
 @font-face {
     font-family: 'starjedi';
@@ -28,5 +29,5 @@ html,
 body,
 #root,
 .light {
-    height: auto;
+    min-height: 100vh;
 }

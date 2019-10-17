@@ -1,0 +1,39 @@
+@import '../../App';
+
+// Constants -->
+$avatar-size: 100px;
+// <-- Constants
+
+.characters-page {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: 0 $container-padding;
+}
+
+.character-card {
+    display: flex;
+    height: $avatar-size;
+    margin-bottom: 20px;
+}
+
+.character-avatar {
+    width: $avatar-size;
+    border-radius: 10px 0 0 10px;
+}
+
+.character-text {
+    padding: $common-padding-space;
+    width: 250px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-name {
+    color: $common-blue;
+    font-family: starjedi;
+    text-align: center;
+}
