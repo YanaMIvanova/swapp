@@ -29,11 +29,11 @@ function EpisodePage() {
                 </p>
                 <div>
                     <b>Director: </b>
-                    <span>George Lucas</span>
+                    <span className="blue-text">George Lucas</span>
                 </div>
                 <div>
                     <b>Release Date: </b>
-                    <span>1999-05-19</span>
+                    <span className="blue-text">1999-05-19</span>
                 </div>
             </section>
             <div className="characters-cards">
