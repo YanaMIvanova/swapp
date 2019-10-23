@@ -1,7 +1,17 @@
 import React from 'react'
 import characterAvatar from './../../assets/character-avatar.jpeg'
+import starshipAvatar from './../../assets/starship.png'
+import { Card } from './../Card'
 
 import './CharacterPage.scss'
+
+const starshipsNames = [
+    'Jedi starfighter',
+    'Trade Federation cruiser',
+    'Naboo star skiff',
+    'Jedi Interceptor',
+    'Belbullab-22 starfighter',
+]
 
 function CharacterPage() {
     return (
@@ -26,6 +36,9 @@ function CharacterPage() {
             </div>
             <div>
                 <div>Piloted Starships</div>
+                {starshipsNames.map((starshipName, index) => (
+                    <Card key={index} to={`/starships/${index}`} imgSrc={starshipAvatar} mainText={starshipName} />
+                ))}
             </div>
         </div>
     )

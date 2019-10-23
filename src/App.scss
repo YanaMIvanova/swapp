@@ -28,3 +28,7 @@ body,
 .light {
     min-height: 100vh;
 }
+
+main {
+    padding: $common-space $container-padding;
+}

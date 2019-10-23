@@ -17,26 +17,28 @@ function App({ theme = 'light' }) {
         <div className={theme}>
             <Router>
                 <Header />
-                <Switch>
-                    <Route exact path="/">
-                        {loggedIn ? <Redirect to="/episodes" /> : <LoginPage />}
-                    </Route>
-                    <Route exact path="/episodes">
-                        {loggedIn ? <EpisodesPage /> : <Redirect to="/" />}
-                    </Route>
-                    <Route exact path="/characters">
-                        <CharactersPage />
-                    </Route>
-                    <Route path="/episodes/:episodeId">
-                        <EpisodePage />
-                    </Route>
-                    <Route path="/characters/:characterId">
-                        <CharacterPage />
-                    </Route>
-                    <Route path="/starships/:starshipId ">
-                        <StarshipPage />
-                    </Route>
-                </Switch>
+                <main>
+                    <Switch>
+                        <Route exact path="/">
+                            {loggedIn ? <Redirect to="/episodes" /> : <LoginPage />}
+                        </Route>
+                        <Route exact path="/episodes">
+                            {loggedIn ? <EpisodesPage /> : <Redirect to="/" />}
+                        </Route>
+                        <Route exact path="/characters">
+                            <CharactersPage />
+                        </Route>
+                        <Route path="/episodes/:episodeId">
+                            <EpisodePage />
+                        </Route>
+                        <Route path="/characters/:characterId">
+                            <CharacterPage />
+                        </Route>
+                        <Route path="/starships/:starshipId">
+                            <StarshipPage />
+                        </Route>
+                    </Switch>
+                </main>
             </Router>
         </div>
     )
