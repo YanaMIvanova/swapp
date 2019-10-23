@@ -6,7 +6,7 @@ import { EpisodePage } from './components/EpisodePage'
 import { CharactersPage } from './components/CharactersPage'
 import { CharacterPage } from './components/CharacterPage'
 import { StarshipPage } from './components/StarshipPage'
-import Header from './components/Header/Header'
+import { Header } from './components/Header'
 
 import './App.scss'
 

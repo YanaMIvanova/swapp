@@ -1,0 +1,42 @@
+@import './../../constants';
+@import './../../App';
+
+.card {
+    display: flex;
+    height: $avatar-size;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.image {
+    width: $avatar-size;
+    border-radius: 10px 0 0 10px;
+}
+
+.text {
+    padding: $common-space;
+    width: 250px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $light-yellow;
+    }
+}
+
+.main {
+    color: $common-blue;
+    font-family: starjedi;
+    text-align: center;
+}
+
+.sub {
+    color: $common-black;
+    font-family: starjedi;
+    text-align: center;
+}

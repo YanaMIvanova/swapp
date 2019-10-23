@@ -1,6 +1,6 @@
 import React from 'react'
 import episodeCover from './../../assets/episode-cover.jpeg'
-import CharacterCard from '../CharactersPage/CharacterCard'
+import { Card } from '../Card'
 
 import characterAvatar from '../../assets/character-avatar.jpeg'
 
@@ -39,11 +39,11 @@ function EpisodePage() {
             <div className="characters-cards">
                 {charactersNames.map((characterName, index) => {
                     return (
-                        <CharacterCard
+                        <Card
                             key={index}
-                            id={index}
-                            characterName={characterName}
-                            characterAvatar={characterAvatar}
+                            imgSrc={characterAvatar}
+                            mainText={characterName}
+                            to={`/characters/${index}`}
                         />
                     )
                 })}

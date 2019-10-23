@@ -1,20 +1,4 @@
-// Colors Constants -->
-$font-color: #4e5b6e;
-
-$common-yellow: #ffe300;
-$light-yellow: #fffda5;
-
-$common-blue: #4bd5ee;
-$dark-blue: darken($common-blue, 25%);
-
-$common-black: #282c34;
-$common-white: #e8eaed;
-// <-- Colors Constants
-
-// Space Constants -->
-$container-padding: 100px;
-$common-space: 20px;
-// <-- Space Constants
+@import 'constants';
 
 @font-face {
     font-family: 'starjedi';

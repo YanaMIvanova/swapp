@@ -1,5 +1,5 @@
 import React from 'react'
-import CharacterCard from './CharacterCard'
+import { Card } from './../Card'
 
 import characterAvatar from './../../assets/character-avatar.jpeg'
 
@@ -14,6 +14,7 @@ const charactersNames = [
     'Han Solo',
     'Greedo',
     'Jabba Desilijic Tiure',
+    'Jabba Desilijic Tiure',
     'Wedge Antilies',
     'Jek Tono Porkins',
     'C-3PO',
@@ -26,11 +27,11 @@ function CharactersPage() {
             <div className="characters-cards">
                 {charactersNames.map((characterName, index) => {
                     return (
-                        <CharacterCard
+                        <Card
                             key={index}
-                            id={index}
-                            characterName={characterName}
-                            characterAvatar={characterAvatar}
+                            imgSrc={characterAvatar}
+                            to={`/characters/${index}`}
+                            mainText={characterName}
                         />
                     )
                 })}
