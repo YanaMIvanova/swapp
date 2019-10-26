@@ -5,8 +5,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    & > div:first-child {
+    & > :first-child {
         width: 100%;
+        margin-top: 0;
     }
 
     & > div:not(:first-child) {
@@ -14,17 +15,14 @@
     }
 }
 
-.character-page-name {
-    padding: 0 0 $common-space;
-    margin-bottom: $common-space;
-    font-family: starjedi;
-    border-bottom: 1px solid $common-black;
-    text-align: center;
-}
-
 .character-page-card {
     background-color: white;
-    border-radius: $common-space;
-    padding: 10px;
+    border-radius: $radius-size;
+    padding: $common-space;
     margin-right: $common-space;
+}
+
+.character-avatar {
+    width: 100%;
+    margin-bottom: $common-space;
 }

@@ -26,6 +26,14 @@
     border-radius: $radius-size;
 }
 
+.title {
+    padding: 0 0 $common-space;
+    margin-bottom: $common-space;
+    font-family: starjedi;
+    border-bottom: 1px solid $common-black;
+    text-align: center;
+}
+
 html,
 body,
 #root,

@@ -16,10 +16,9 @@ const starshipsNames = [
 function CharacterPage() {
     return (
         <div className="character-page">
-            <div className="character-page-name blue-text">Obi-Wan Kenobi</div>
+            <h1 className="title blue-text">Obi-Wan Kenobi</h1>
             <div className="character-page-card">
-                <div>Obi-Wan Kenobi</div>
-                <img src={characterAvatar} alt="Character avatar" />
+                <img src={characterAvatar} alt="Character avatar" className="character-avatar" />
                 <div className="character-page-info">
                     <b>Height: </b>
                     <span className="blue-text">182</span>
@@ -35,7 +34,7 @@ function CharacterPage() {
                 </div>
             </div>
             <div>
-                <div className="character-page-name black-text">Piloted Starships</div>
+                <div className="title black-text">Piloted Starships</div>
                 {starshipsNames.map((starshipName, index) => (
                     <Card key={index} to={`/starships/${index}`} imgSrc={starshipAvatar} mainText={starshipName} />
                 ))}
