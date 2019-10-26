@@ -49,6 +49,7 @@ function EpisodePage() {
                     )
                 })}
             </div>
+            <button className="common-button">Load More</button>
         </div>
     )
 }
