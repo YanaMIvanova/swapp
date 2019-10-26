@@ -3,7 +3,7 @@
 .light {
     .login-page {
         background-color: $common-black;
-        border-radius: 5px;
+        border-radius: $radius-size;
 
         padding: 0 $common-space $common-space;
         margin: auto;
@@ -28,7 +28,7 @@
     .login-form {
         background-color: $common-white;
         padding: $common-space $common-space;
-        border-radius: 5px;
+        border-radius: $radius-size;
 
         .input {
             width: 300px;
@@ -36,7 +36,7 @@
             background-color: $light-yellow;
             padding: 10px;
             margin-bottom: 10px;
-            border-radius: 10px;
+            border-radius: $radius-size;
 
             &:focus {
                 outline: none;
@@ -50,7 +50,7 @@
         border: none;
         width: 100%;
         padding: 10px;
-        border-radius: 10px;
+        border-radius: $radius-size;
         color: $common-yellow;
         transition: 0.3s;
 

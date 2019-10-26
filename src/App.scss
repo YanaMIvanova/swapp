@@ -13,13 +13,17 @@
     color: $common-blue;
 }
 
+.black-text {
+    color: $common-black;
+}
+
 .common-button {
     padding: 10px;
     color: $common-yellow;
     font-family: starjedi;
     background-color: $common-black;
     border: none;
-    border-radius: 10px;
+    border-radius: $radius-size;
 }
 
 html,

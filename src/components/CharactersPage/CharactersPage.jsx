@@ -28,6 +28,7 @@ function CharactersPage() {
                 {charactersNames.map((characterName, index) => {
                     return (
                         <Card
+                            small
                             key={index}
                             imgSrc={characterAvatar}
                             to={`/characters/${index}`}

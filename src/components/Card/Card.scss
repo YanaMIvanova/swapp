@@ -10,12 +10,12 @@
 
 .image {
     width: $avatar-size;
-    border-radius: 10px 0 0 10px;
+    border-radius: $radius-size 0 0 $radius-size;
 }
 
 .text {
     padding: $common-space;
-    width: 250px;
+    width: 100%;
     background-color: white;
 
     display: flex;
@@ -39,4 +39,8 @@
     color: $common-black;
     font-family: starjedi;
     text-align: center;
+}
+
+.small {
+    width: 200px;
 }

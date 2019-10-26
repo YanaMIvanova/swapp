@@ -40,6 +40,7 @@ function EpisodePage() {
                 {charactersNames.map((characterName, index) => {
                     return (
                         <Card
+                            small
                             key={index}
                             imgSrc={characterAvatar}
                             mainText={characterName}

@@ -16,7 +16,7 @@ const starshipsNames = [
 function CharacterPage() {
     return (
         <div className="character-page">
-            <div className="character-page-name">Obi-Wan Kenobi</div>
+            <div className="character-page-name blue-text">Obi-Wan Kenobi</div>
             <div className="character-page-card">
                 <div>Obi-Wan Kenobi</div>
                 <img src={characterAvatar} alt="Character avatar" />
@@ -35,7 +35,7 @@ function CharacterPage() {
                 </div>
             </div>
             <div>
-                <div>Piloted Starships</div>
+                <div className="character-page-name black-text">Piloted Starships</div>
                 {starshipsNames.map((starshipName, index) => (
                     <Card key={index} to={`/starships/${index}`} imgSrc={starshipAvatar} mainText={starshipName} />
                 ))}

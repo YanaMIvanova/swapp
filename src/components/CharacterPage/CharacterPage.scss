@@ -7,13 +7,24 @@
 
     & > div:first-child {
         width: 100%;
-        font-family: starjedi;
-        color: $common-blue;
-        padding: 0 0 $common-space;
-        border-bottom: 1px solid $common-black;
     }
 
     & > div:not(:first-child) {
         flex: 1;
     }
+}
+
+.character-page-name {
+    padding: 0 0 $common-space;
+    margin-bottom: $common-space;
+    font-family: starjedi;
+    border-bottom: 1px solid $common-black;
+    text-align: center;
+}
+
+.character-page-card {
+    background-color: white;
+    border-radius: $common-space;
+    padding: 10px;
+    margin-right: $common-space;
 }
