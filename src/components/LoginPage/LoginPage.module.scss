@@ -17,6 +17,16 @@
     transform: translate(-50%, -50%);
 }
 
+.errorText {
+    position: absolute;
+    color: red;
+    top: 63px;
+}
+
+.invalid {
+    box-shadow: 0px 0px 4px red;
+}
+
 .logo {
     padding-left: 10px;
     color: $common-yellow;
@@ -26,7 +36,7 @@
 
 .form {
     background-color: $common-white;
-    padding: $common-space $common-space;
+    padding: ($common-space + 10) $common-space;
     border-radius: $radius-size;
 
     .input {
@@ -55,5 +65,13 @@
 
     &:hover {
         background-color: lighten($common-black, 25%);
+    }
+
+    &.disabled {
+        background-color: lighten($common-black, 25%);
+
+        &:hover {
+            cursor: not-allowed;
+        }
     }
 }
