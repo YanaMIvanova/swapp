@@ -2,6 +2,7 @@ import React from 'react'
 import characterAvatar from './../../assets/character-avatar.jpeg'
 import starshipAvatar from './../../assets/starship.png'
 import { Card } from './../Card'
+import { Title } from './../Title'
 
 import styles from './CharacterPage.module.scss'
 
@@ -16,7 +17,7 @@ const starshipsNames = [
 function CharacterPage() {
     return (
         <div className={styles.page}>
-            <h1 className="title blue-text">Obi-Wan Kenobi</h1>
+            <Title mainTitle="Obi-Wan Kenobi" />
             <div className={styles.card}>
                 <img src={characterAvatar} alt="Character avatar" className={styles.avatar} />
                 <div>
