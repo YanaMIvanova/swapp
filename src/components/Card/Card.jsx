@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import { Link } from 'react-router-dom'
 import { string, bool } from 'prop-types'
 
@@ -10,7 +11,7 @@ export default function Card(props) {
     return (
         <Link className={styles.card} to={to}>
             <img className={styles.image} src={imgSrc} alt="Character Avatar" />
-            <div className={`${styles.text}${small ? ` ${styles.small}` : ''}`}>
+            <div className={classnames(styles.text, { [styles.small]: small })}>
                 <span className={styles.main}>{mainText}</span>
                 {subText && <span className={styles.sub}>{subText}</span>}
             </div>

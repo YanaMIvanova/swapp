@@ -1,7 +1,8 @@
 import React from 'react'
-import episodeCover from './../../assets/episode-cover.jpeg'
 import { Card } from '../Card'
+import { Title } from '../Title'
 
+import episodeCover from './../../assets/episode-cover.jpeg'
 import characterAvatar from '../../assets/character-avatar.jpeg'
 
 import styles from './EpisodePage.module.scss'
@@ -14,8 +15,7 @@ function EpisodePage() {
             <div className={styles.card}>
                 <img className={styles.cover} src={episodeCover} alt="Episode Cover" />
                 <div className={styles.text}>
-                    <span className={styles.title}>Star Wars: Episode I</span>
-                    <span className={styles.subtitle}>The Phantom Menace</span>
+                    <Title underline={false} mainTitle="Star Wars: Episode I" subtitle="The Phantom Menace" />
                 </div>
             </div>
             <section className={styles.info}>

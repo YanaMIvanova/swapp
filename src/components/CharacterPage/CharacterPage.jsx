@@ -1,8 +1,9 @@
 import React from 'react'
-import characterAvatar from './../../assets/character-avatar.jpeg'
-import starshipAvatar from './../../assets/starship.png'
 import { Card } from './../Card'
 import { Title } from './../Title'
+
+import characterAvatar from './../../assets/character-avatar.jpeg'
+import starshipAvatar from './../../assets/starship.png'
 
 import styles from './CharacterPage.module.scss'
 
@@ -35,7 +36,7 @@ function CharacterPage() {
                 </div>
             </div>
             <div>
-                <div className="title black-text">Piloted Starships</div>
+                <Title subtitle="Piloted Starships" />
                 {starshipsNames.map((starshipName, index) => (
                     <Card key={index} to={`/starships/${index}`} imgSrc={starshipAvatar} mainText={starshipName} />
                 ))}

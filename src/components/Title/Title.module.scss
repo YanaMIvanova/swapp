@@ -2,17 +2,17 @@
 
 .title {
     width: 100%;
+}
+
+.underline {
+    border-bottom: 1px solid $common-black;
     padding: 0 0 $common-space;
     margin-bottom: $common-space;
-    border-bottom: 1px solid $common-black;
 }
 
 .mainTitle,
 .subtitle {
     text-align: center;
     font-family: starjedi;
-}
-
-.mainTitle {
     margin: 0;
 }

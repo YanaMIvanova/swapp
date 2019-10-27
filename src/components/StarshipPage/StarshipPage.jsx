@@ -1,15 +1,13 @@
 import React from 'react'
 import starshipAvatar from './../../assets/starship.png'
+import { Title } from './../Title'
 
 import styles from './StarshipPage.module.scss'
 
 function StarshipPage() {
     return (
         <div className={styles.page}>
-            <div className={styles.title}>
-                <h1>Jedi starfighter</h1>
-                <h2>(Delta-7 Aethersprite-class interceptor)</h2>
-            </div>
+            <Title mainTitle="Jedi starfighter" subtitle="(Delta-7 Aethersprite-class interceptor)" />
             <div className={styles.card}>
                 <img src={starshipAvatar} alt="Starship avatar" className={styles.avatar} />
                 <div>
