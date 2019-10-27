@@ -1,0 +1,27 @@
+@import '../../constants';
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    width: 100%;
+}
+
+.card,
+.classMax {
+    flex: 1;
+}
+
+.avatar {
+    width: 100%;
+    margin-bottom: $common-space;
+}
+
+.card {
+    background-color: white;
+    border-radius: $radius-size;
+    padding: $common-space;
+    margin-right: $common-space;
+}

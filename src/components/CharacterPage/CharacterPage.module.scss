@@ -1,6 +1,6 @@
 @import '../../constants';
 
-.character-page {
+.page {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -15,14 +15,14 @@
     }
 }
 
-.character-page-card {
+.card {
     background-color: white;
     border-radius: $radius-size;
     padding: $common-space;
     margin-right: $common-space;
 }
 
-.character-avatar {
+.avatar {
     width: 100%;
     margin-bottom: $common-space;
 }

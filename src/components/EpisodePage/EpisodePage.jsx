@@ -4,22 +4,22 @@ import { Card } from '../Card'
 
 import characterAvatar from '../../assets/character-avatar.jpeg'
 
-import './EpisodePage.scss'
+import styles from './EpisodePage.module.scss'
 
 const charactersNames = ['Luke Skywalker', 'Obi-Wan Kenobi', 'Anakin Skywalker', 'Wilhuff Tarkin', 'Chewbacca']
 
 function EpisodePage() {
     return (
-        <div className="episode-page">
-            <div className="episode-side-card">
-                <img className="episode-cover" src={episodeCover} alt="Episode Cover" />
-                <div className="episode-text">
-                    <span className="episode-title">Star Wars: Episode I</span>
-                    <span className="episode-subtitle">The Phantom Menace</span>
+        <div className={styles.page}>
+            <div className={styles.card}>
+                <img className={styles.cover} src={episodeCover} alt="Episode Cover" />
+                <div className={styles.text}>
+                    <span className={styles.title}>Star Wars: Episode I</span>
+                    <span className={styles.subtitle}>The Phantom Menace</span>
                 </div>
             </div>
-            <section className="episode-info">
-                <p className="episode-summary">
+            <section className={styles.info}>
+                <p className={styles.summary}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                     and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
@@ -36,7 +36,7 @@ function EpisodePage() {
                     <span className="blue-text">1999-05-19</span>
                 </div>
             </section>
-            <div className="characters-cards">
+            <div className={styles.cards}>
                 {charactersNames.map((characterName, index) => {
                     return (
                         <Card

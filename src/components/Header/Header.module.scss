@@ -1,0 +1,56 @@
+@import '../../constants';
+
+.header {
+    padding: 0 $container-padding;
+    background-color: $common-black;
+
+    .logo {
+        text-decoration: none;
+        padding-left: 10px;
+        color: $common-yellow;
+        font-size: 38px;
+        font-family: starjedi;
+    }
+}
+
+.navigation {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: $common-blue;
+            transition: 0.3s;
+
+            &:hover {
+                color: $dark-blue;
+            }
+
+            &.active {
+                color: $dark-blue;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .backButton {
+        height: 45px;
+        font-size: 16px;
+        background-color: transparent;
+        border: 2px solid $common-blue;
+        color: $common-blue;
+        transition: 0.3s;
+
+        &:hover {
+            color: $dark-blue;
+            border-color: $dark-blue;
+        }
+    }
+}

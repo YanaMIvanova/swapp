@@ -3,7 +3,7 @@ import characterAvatar from './../../assets/character-avatar.jpeg'
 import starshipAvatar from './../../assets/starship.png'
 import { Card } from './../Card'
 
-import './CharacterPage.scss'
+import styles from './CharacterPage.module.scss'
 
 const starshipsNames = [
     'Jedi starfighter',
@@ -15,11 +15,11 @@ const starshipsNames = [
 
 function CharacterPage() {
     return (
-        <div className="character-page">
+        <div className={styles.page}>
             <h1 className="title blue-text">Obi-Wan Kenobi</h1>
-            <div className="character-page-card">
-                <img src={characterAvatar} alt="Character avatar" className="character-avatar" />
-                <div className="character-page-info">
+            <div className={styles.card}>
+                <img src={characterAvatar} alt="Character avatar" className={styles.avatar} />
+                <div>
                     <b>Height: </b>
                     <span className="blue-text">182</span>
                     <br />

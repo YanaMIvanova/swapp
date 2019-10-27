@@ -1,0 +1,59 @@
+@import '../../constants';
+
+.page {
+    background-color: $common-black;
+    border-radius: $radius-size;
+
+    padding: 0 $common-space $common-space;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    padding-left: 10px;
+    color: $common-yellow;
+    font-size: 38px;
+    font-family: starjedi;
+}
+
+.form {
+    background-color: $common-white;
+    padding: $common-space $common-space;
+    border-radius: $radius-size;
+
+    .input {
+        width: 300px;
+        border: 0.4px solid $common-black;
+        background-color: $light-yellow;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: $radius-size;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 4px $common-black;
+        }
+    }
+}
+
+.submitButton {
+    background-color: $common-black;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: $radius-size;
+    color: $common-yellow;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: lighten($common-black, 25%);
+    }
+}

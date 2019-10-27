@@ -3,7 +3,7 @@ import { Card } from './../Card'
 
 import characterAvatar from './../../assets/character-avatar.jpeg'
 
-import './CharactersPage.scss'
+import styles from './CharactersPage.module.scss'
 
 const charactersNames = [
     'Luke Skywalker',
@@ -23,8 +23,8 @@ const charactersNames = [
 
 function CharactersPage() {
     return (
-        <div className="characters-page">
-            <div className="characters-cards">
+        <div className={styles.page}>
+            <div className={styles.cards}>
                 {charactersNames.map((characterName, index) => {
                     return (
                         <Card

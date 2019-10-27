@@ -1,16 +1,18 @@
 import React from 'react'
 import starshipAvatar from './../../assets/starship.png'
 
+import styles from './StarshipPage.module.scss'
+
 function StarshipPage() {
     return (
-        <div className="starship-page">
-            <div className="title">
+        <div className={styles.page}>
+            <div className={styles.title}>
                 <h1>Jedi starfighter</h1>
                 <h2>(Delta-7 Aethersprite-class interceptor)</h2>
             </div>
-            <div className="starship-page-card">
-                <img src={starshipAvatar} alt="Starship avatar" />
-                <div className="starship-page-info">
+            <div className={styles.card}>
+                <img src={starshipAvatar} alt="Starship avatar" className={styles.avatar} />
+                <div>
                     <b>Class: </b>
                     <span className="blue-text">starfighter</span>
                     <br />
@@ -27,7 +29,7 @@ function StarshipPage() {
                     <span className="blue-text">1</span>
                 </div>
             </div>
-            <div className="class-max">
+            <div className={styles.classMax}>
                 <h4>Compared to Starship Class Max</h4>
             </div>
         </div>

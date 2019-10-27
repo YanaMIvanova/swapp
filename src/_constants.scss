@@ -20,3 +20,8 @@ $common-space: 20px;
 $avatar-size: 90px;
 $radius-size: 10px;
 // <-- Size Constants
+
+@font-face {
+    font-family: 'starjedi';
+    src: url('./font/Starjedi.ttf') format('truetype');
+}

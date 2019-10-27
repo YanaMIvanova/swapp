@@ -3,7 +3,7 @@ import EpisodeCard from './EpisodeCard'
 
 import img from '../../assets/episode-cover.jpeg'
 
-import './EpisodesPage.scss'
+import styles from './EpisodesPage.module.scss'
 
 const episodeTitles = [
     'The Phantom Menace',
@@ -16,7 +16,7 @@ const episodeTitles = [
 
 function EpisodesPage() {
     return (
-        <div className="episodes-page">
+        <div className={styles.page}>
             {episodeTitles.map((title, index) => (
                 <EpisodeCard
                     key={index}

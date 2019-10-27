@@ -1,23 +1,23 @@
-@import './../../App';
+@import '../../constants';
 
-.episodes-page {
+.page {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
 }
 
-.episode-card {
+.card {
     width: 200px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
 
-    .episode-cover {
+    .cover {
         border-radius: $radius-size $radius-size 0 0;
         width: 100%;
     }
 
-    .episode-text {
+    .text {
         background-color: white;
         padding: $common-space;
 
@@ -27,7 +27,7 @@
             background-color: $light-yellow;
         }
 
-        .episode-summary {
+        .summary {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -37,7 +37,7 @@
             color: $font-color;
         }
 
-        .episode-title {
+        .title {
             color: lightblue;
             font-family: fantasy;
             font-size: 20px;

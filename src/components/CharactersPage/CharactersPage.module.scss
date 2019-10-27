@@ -1,12 +1,12 @@
 @import '../../constants';
 
-.characters-page {
+.page {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.characters-cards {
+.cards {
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;

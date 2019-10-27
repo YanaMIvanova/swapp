@@ -1,10 +1,10 @@
-@import './../../App';
+@import '../../constants';
 
-.episode-side-card {
+.card {
     display: flex;
     flex-direction: row;
 
-    .episode-text {
+    .text {
         padding: 20px;
         width: 100%;
         font-family: starjedi;
@@ -16,26 +16,32 @@
     }
 }
 
-.episode-cover {
+.cards {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.cover {
     border-radius: $radius-size 0 0 $radius-size;
 }
 
-.episode-title {
+.title {
     font-size: 28px;
     color: $common-blue;
 }
 
-.episode-subtitle {
+.subtitle {
     color: $common-black;
 }
 
-.episode-info {
+.info {
     padding: 20px;
     margin: 20px 0;
     background-color: white;
 }
 
-.episode-summary {
+.summary {
     margin: 0 0 $common-space;
 
     overflow: hidden;
