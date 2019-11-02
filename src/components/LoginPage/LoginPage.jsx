@@ -10,7 +10,7 @@ function LoginPage({ logIn }) {
     const isInvalid = () => Object.values(invalidFields).includes(true)
     const hasEmptyFields = () => Object.values(formState).includes('')
 
-    const login = e => {
+    const handleLogin = e => {
         e.preventDefault()
 
         if (isInvalid() || hasEmptyFields()) {
@@ -21,7 +21,7 @@ function LoginPage({ logIn }) {
         setFormState({ username: '', password: '' })
     }
 
-    const validate = e => {
+    const handleValidate = e => {
         if (e.target.value.length <= 3) {
             setInvalidFields({ ...invalidFields, [e.target.id]: true })
         } else {
@@ -29,7 +29,7 @@ function LoginPage({ logIn }) {
         }
     }
 
-    const change = e => {
+    const handleChange = e => {
         e.preventDefault()
         setFormState({ ...formState, ...{ [e.target.id]: e.target.value } })
     }
@@ -37,12 +37,12 @@ function LoginPage({ logIn }) {
     return (
         <div className={styles.page}>
             <span className={styles.logo}>SWAPP</span>
-            <form onSubmit={login} className={styles.form}>
+            <form onSubmit={handleLogin} className={styles.form}>
                 {isInvalid() && <strong className={styles.errorText}>Invalid Credentials</strong>}
                 <input
                     required
-                    onBlur={validate}
-                    onChange={change}
+                    onBlur={handleValidate}
+                    onChange={handleChange}
                     value={formState.username}
                     className={classnames(styles.input, { [styles.invalid]: invalidFields.username === true })}
                     placeholder="Username"
@@ -52,8 +52,8 @@ function LoginPage({ logIn }) {
                 <br />
                 <input
                     required
-                    onBlur={validate}
-                    onChange={change}
+                    onBlur={handleValidate}
+                    onChange={handleChange}
                     value={formState.password}
                     className={classnames(styles.input, { [styles.invalid]: invalidFields.password === true })}
                     placeholder="Password"
