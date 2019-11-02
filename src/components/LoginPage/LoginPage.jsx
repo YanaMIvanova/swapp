@@ -3,7 +3,7 @@ import classnames from 'classnames'
 
 import styles from './LoginPage.module.scss'
 
-function LoginPage() {
+function LoginPage({ logIn }) {
     const [formState, setFormState] = useState({ username: '', password: '' })
     const [invalidFields, setInvalidFields] = useState({ username: false, password: false })
 
@@ -17,6 +17,7 @@ function LoginPage() {
             return
         }
 
+        logIn(true)
         setFormState({ username: '', password: '' })
     }
 

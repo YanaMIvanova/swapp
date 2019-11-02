@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { LoginPage } from './components/LoginPage'
 import { EpisodesPage } from './components/EpisodesPage'
@@ -11,33 +11,40 @@ import { Header } from './components/Header'
 import './App.scss'
 
 function App({ theme = 'light' }) {
-    const loggedIn = true
+    const [isLoggedIn, logIn] = useState(false)
 
     return (
         <div className={theme}>
             <Router>
-                <Header />
+                {isLoggedIn && <Header />}
                 <main>
-                    <Switch>
-                        <Route exact path="/">
-                            {loggedIn ? <Redirect to="/episodes" /> : <LoginPage />}
-                        </Route>
-                        <Route exact path="/episodes">
-                            {loggedIn ? <EpisodesPage /> : <Redirect to="/" />}
-                        </Route>
-                        <Route exact path="/characters">
-                            <CharactersPage />
-                        </Route>
-                        <Route path="/episodes/:episodeId">
-                            <EpisodePage />
-                        </Route>
-                        <Route path="/characters/:characterId">
-                            <CharacterPage />
-                        </Route>
-                        <Route path="/starships/:starshipId">
-                            <StarshipPage />
-                        </Route>
-                    </Switch>
+                    {isLoggedIn ? (
+                        <Switch>
+                            <Route path="/episodes/:episodeId">
+                                <EpisodePage />
+                            </Route>
+                            <Route path="/characters/:characterId">
+                                <CharacterPage />
+                            </Route>
+                            <Route path="/starships/:starshipId">
+                                <StarshipPage />
+                            </Route>
+                            <Route path="/episodes">
+                                <EpisodesPage />
+                            </Route>
+                            <Route path="/characters">
+                                <CharactersPage />
+                            </Route>
+                            <Route exact path="/">
+                                <Redirect to="/episodes" />
+                            </Route>
+                        </Switch>
+                    ) : (
+                        <>
+                            <Redirect to="/" />
+                            <LoginPage logIn={logIn} />
+                        </>
+                    )}
                 </main>
             </Router>
         </div>
