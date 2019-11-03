@@ -1,11 +1,30 @@
 import React, { useState } from 'react'
+import { gql } from 'apollo-boost'
+import { useApolloClient, useMutation } from '@apollo/react-hooks'
 import classnames from 'classnames'
 
 import styles from './LoginPage.module.scss'
 
+const LOGIN_USER = gql`
+    mutation login($email: String!) {
+        login(email: $email)
+    }
+`
+
 function LoginPage({ logIn }) {
     const [formState, setFormState] = useState({ username: '', password: '' })
     const [invalidFields, setInvalidFields] = useState({ username: false, password: false })
+
+    const client = useApolloClient()
+    const [login, { loading, error }] = useMutation(LOGIN_USER, {
+        onCompleted({ login }) {
+            localStorage.setItem('token', login)
+            client.writeData({ data: { isLoggedIn: true } })
+        },
+    })
+
+    if (loading) return <p>LOADING...</p>
+    if (error) return <p>An error occurred</p>
 
     const isInvalid = () => Object.values(invalidFields).includes(true)
     const hasEmptyFields = () => Object.values(formState).includes('')
